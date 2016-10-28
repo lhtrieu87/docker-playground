@@ -1,0 +1,18 @@
+{
+  "name": "simple_node_server",
+  "version": "1.0.0",
+  "description": "A simple node web application with Docker",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Docker",
+    "Node"
+  ],
+  "author": "Le Hong Trieu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
