@@ -1,0 +1,30 @@
+nginx:
+    build: ./nginx
+    links:
+        - counter-service1:counter-service1
+        - counter-service2:counter-service2
+        - counter-service3:counter-service3
+    ports:
+        - "80:80"
+counter-service1:
+    build: ./counter-service
+    links:
+        - redis
+    ports:
+        - "8080"
+counter-service2:
+    build: ./counter-service
+    links:
+        - redis
+    ports:
+        - "8080"
+counter-service3:
+    build: ./counter-service
+    links:
+        - redis
+    ports:
+        - "8080"
+redis:
+    image: redis
+    ports:
+        - "6379"
